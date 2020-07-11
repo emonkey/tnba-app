@@ -1,131 +1,68 @@
-# React 16.9+ (Typescript) React-Router 4 + Redux + Bootstrap + Webpack 4 with Hot Reload and redux-devtools-extension STARTER
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/MacKentoch/react-redux-bootstrap-webpack-starter)
-[![Build Status](https://travis-ci.org/MacKentoch/react-redux-bootstrap-webpack-starter.svg?branch=master)](https://travis-ci.org/MacKentoch/react-redux-bootstrap-webpack-starter)
-[![Coverage Status](https://coveralls.io/repos/github/MacKentoch/react-redux-bootstrap-webpack-starter/badge.svg?branch=master)](https://coveralls.io/github/MacKentoch/react-redux-bootstrap-webpack-starter?branch=master)
+## Available Scripts
 
-> My best React + redux project starter.
+In the project directory, you can run:
 
-- _webpack is as simple as possible_
-- _ReactJS is written with `optimization tricks` (stateless, hooks, pure render, PureComponent...)._
-- _`pure front-end` = server independant (use whatever you want as server: NodeJS, Rails, .NET...)_
-- `SPA` but `SEO` and/or `PWA` friendly since use of `dynamic imports` and `application snapshot`.
+### `yarn start`
 
-_Concept behind:_ same as [react-bootstrap-webpack-starter](https://github.com/MacKentoch/react-bootstrap-webpack-starter) **but added `Redux` and amazing and helpful [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension#redux-devtools-extension).**
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-![preview](./preview/preview.png)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMacKentoch%2Freact-redux-bootstrap-webpack-starter.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMacKentoch%2Freact-redux-bootstrap-webpack-starter?ref=badge_shield)
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Detailed Content
+### `yarn test`
 
-**Front:**
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Typescript
-- React JS (16.9+ - [github :link:](https://github.com/facebook/react))
-- Redux (_as you application grows managing state will be a serious concern, save pain with Redux_)
-- React-Redux (_Redux is not specific to ReactJS, you could easily use it with Angular2 for instance_)
-- redux-devtools-extension ([github :link:](https://github.com/zalmoxisus/redux-devtools-extension#redux-devtools-extension))
-- connected-react-router 4 ([github :link:](https://github.com/supasate/connected-react-router))
-- react-router (4.x- [github :link:](https://github.com/reactjs/react-router))
-- Bootstrap (4.x - [github :link:](https://github.com/twbs/bootstrap))
-- reactstrap ([github :link:](https://github.com/reactstrap/reactstrap))
-- loadable-components - work with reactsnap for better static website performance - (_stuck to pre v2.2.3+ breakings changes, waiting for a new solution see [PR](https://github.com/stereobooster/react-snap/pull/338/commits/adf107b4bff212a854a93e2d90f89d369433a807)_)
-- font-awesome ([github :link:](https://github.com/FortAwesome/Font-Awesome))
-- animate.css ([github :link:](https://github.com/daneden/animate.css))
-- classnames ([github :link:](https://github.com/JedWatson/classnames))
-- react-motion ([github :link:](https://github.com/chenglou/react-motion))
-- Webpack 4.x ([github :link:](https://github.com/webpack/webpack))
-- axios ([github :link:](https://github.com/mzabriskie/axios) _Why: simple, complete, isomorphic ..._)
+### `yarn build`
 
-**Tool chain:**
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Typescript
-- eslint
-- webpack 4
-- hot reload
-- loaders
-  - `ts` / `tsx`
-  - css
-  - json
-  - images formats
-  - svg and fonts formats
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-**tests:**
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Jest
-- enzyme
+### `yarn eject`
 
-## Changelog
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-[Here](./CHANGELOG.md)
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Usage
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-### Install
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-```bash
-# from root directory:
-cd front && yarn install
-```
+## Learn More
 
-### bundle dev mode (_+ redux-devtools_)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```bash
-# from root directory:
-cd front && yarn run dev
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### dev : hot reload mode (_+ redux-devtools_)
+### Code Splitting
 
-```bash
-# from root directory:
-cd front && yarn run start
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### tests
+### Analyzing the Bundle Size
 
-```bash
-# from root directory:
-cd front && yarn run test
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### bundle production mode
+### Making a Progressive Web App
 
-```bash
-# from root directory:
-cd front && yarn run prod
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### mini node-express server
+### Advanced Configuration
 
-⚠️Ensure having bundled the application before (result is in `_ROOT_DIR_/docs` directory), then:
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-```bash
-# from root directory:
+### Deployment
 
-# install dependencies the first time only:
-cd server && yarn install
-# run the server:
-yarn run run-server # this will serve ROOT/docs content!
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-## Donate
+### `yarn build` fails to minify
 
-Do you use & like react-redux-bootstrap-webpack-starter but you don’t find a way to show some love?
-If yes, please consider donating to support this project. Otherwise, no worries, regardless of whether there is support or not, I will keep maintaining this project. Still, if you buy me a cup of coffee I would be more than happy though 😄
-
-[![Support via PayPal](./assets/Paypal-button.png)](https://www.paypal.me/ErwanDatin/)
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2019 Erwan DATIN
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMacKentoch%2Freact-redux-bootstrap-webpack-starter.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FMacKentoch%2Freact-redux-bootstrap-webpack-starter?ref=badge_large)
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
