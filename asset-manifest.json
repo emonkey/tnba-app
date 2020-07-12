@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tnba-app/static/css/main.8c4ed233.chunk.css",
+    "main.js": "/tnba-app/static/js/main.01786b9f.chunk.js",
+    "main.js.map": "/tnba-app/static/js/main.01786b9f.chunk.js.map",
+    "runtime-main.js": "/tnba-app/static/js/runtime-main.e166761a.js",
+    "runtime-main.js.map": "/tnba-app/static/js/runtime-main.e166761a.js.map",
+    "static/js/2.62e435ad.chunk.js": "/tnba-app/static/js/2.62e435ad.chunk.js",
+    "static/js/2.62e435ad.chunk.js.map": "/tnba-app/static/js/2.62e435ad.chunk.js.map",
+    "index.html": "/tnba-app/index.html",
+    "precache-manifest.948e28b3ac1b5240794d7f35951179f2.js": "/tnba-app/precache-manifest.948e28b3ac1b5240794d7f35951179f2.js",
+    "service-worker.js": "/tnba-app/service-worker.js",
+    "static/css/main.8c4ed233.chunk.css.map": "/tnba-app/static/css/main.8c4ed233.chunk.css.map",
+    "static/js/2.62e435ad.chunk.js.LICENSE.txt": "/tnba-app/static/js/2.62e435ad.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/tnba-app/static/media/logo.ee7cd8ed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e166761a.js",
+    "static/js/2.62e435ad.chunk.js",
+    "static/css/main.8c4ed233.chunk.css",
+    "static/js/main.01786b9f.chunk.js"
+  ]
+}
