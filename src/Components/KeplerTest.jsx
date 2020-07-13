@@ -1,42 +1,34 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createAction } from 'redux-actions';
-import { Container, Row, Col } from 'react-bootstrap';
-import styled, { ThemeProvider } from 'styled-components';
-import MapGL, { StaticMap } from 'react-map-gl';
-import DeckGL from 'deck.gl';
+import {ThemeProvider} from 'styled-components';
 
 import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
 
 // Kepler.gl Schema APIs
 import KeplerGl from 'kepler.gl';
-// Kepler.gl themes
+// Kepler.gl Themes
 import { themeLT as theme } from 'kepler.gl/styles';
 // Kepler.gl actions
-import { forwardTo, updateMap, addDataToMap, wrapTo } from 'kepler.gl/actions';
+import { forwardTo, addDataToMap, wrapTo } from 'kepler.gl/actions';
 // Kepler.gl Data processing APIs
 import Processors from 'kepler.gl/processors';
 // Kepler.gl Schema APIs
 import KeplerGlSchema from 'kepler.gl/schemas';
 
 // Component and helpers
-import Charts from './Charts';
 import Button from './Button';
-import { LayerControls, MapStylePicker, HEXAGON_CONTROLS } from './Controls';
-import { tooltipStyle } from '../Utilities/Style';
-import { renderLayers } from '../VisGL/DeckGLLayers';
-
 import downloadJsonFile from "../Utilities/FileDownload";
 
 // Data
 import sa22018Config from '../Data/sa2-2018-config';
-import eduData from '../Data/tnb_education_1.geojson.js';
-//import wrkData from '../Data/tnb_work_1.geojson.js';
+import eduData from '../Data/tnb_education_1.csv.js';
+import wrkData from '../Data/tnb_work_1.csv.js';
 //import generalisedData from '../Data/sa2-2018-generalised.geojson.js';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiZXJpY2x1byIsImEiOiJjazd5bHhjcWcwODdxM2Vuenl6MWIwbDQ5In0.py1zWdF-m_23Zds_UjfYjQ';
 
-const EDU_DATA = Processors.processGeojson(eduData);
+const EDU_DATA = Processors.processCsvData(eduData);
+const WRK_DATA = Processors.processCsvData(wrkData);
 
 class KeplerTest extends Component {
 	constructor(props) {
@@ -55,8 +47,18 @@ class KeplerTest extends Component {
 				addDataToMap({
 					datasets: [
 						{
-							info: {label: 'Travel to Education'},
+							info: {
+								label: 'Travel to Education',
+								id: 'EDU'
+							},
 							data: EDU_DATA
+						},
+						{
+							info: {
+								label: 'Travel to Work',
+								id: 'WRK'
+							},
+							data: WRK_DATA
 						}
 					],
 					config: sa22018Config
@@ -94,8 +96,18 @@ class KeplerTest extends Component {
 				addDataToMap({
 					datasets: [
 						{
-							info: {label: 'Travel to Education'},
+							info: {
+								label: 'Travel to Education',
+								id: 'EDU'
+							},
 							data: EDU_DATA
+						},
+						{
+							info: {
+								label: 'Travel to Work',
+								id: 'WRK'
+							},
+							data: WRK_DATA
 						}
 					],
 					config: sa22018Config
@@ -133,6 +145,6 @@ const mapStateToProps = state => state;
 const mapDispatchToProps = (dispatch, props) => ({
 	dispatch,
 	keplerGlDispatch: forwardTo('map', dispatch)
-   });
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(KeplerTest);
