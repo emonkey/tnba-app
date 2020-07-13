@@ -14,9 +14,10 @@ function App() {
 		<section className="mt-3">
 			<h3>About</h3>
 			<p>See how New Zealanders travelled to their places of work and education according to the 2018 Census. Mapping out the population centers where most people live, work, and learn as well as those remote communities where a commute covers large distances.</p>
+			<p>This interactive map is driven by <a href="https://docs.kepler.gl/docs/user-guides/g-interactions" target="_blank" rel="noopener noreferrer">kepler.gl</a> - a data-agnostic, high-performance web-based application for visual exploration of large-scale geolocation data sets built on top of <a href="https://www.mapbox.com/" target="_blank" rel="noopener noreferrer">Mapbox GL</a> and <a href="http://uber.github.io/deck.gl/#/" target="_blank" rel="noopener noreferrer">deck.gl</a>.</p>
 
 			<h3 className="pt-3">Data</h3>
-			<p>The statistics data driving this interactive map is sourced from the <a href="https://datafinder.stats.govt.nz/data/category/census/2018/commuter-view/">2018 Census Data</a> provided by <a href="https://datafinder.stats.govt.nz/">Statistics NZ</a> and the <a href="https://www.stats.govt.nz/tools/commuter-view">Commuter View</a></p>
+			<p>The statistics data driving this interactive map is sourced from the <a href="https://datafinder.stats.govt.nz/data/category/census/2018/commuter-view/" target="_blank" rel="noopener noreferrer">2018 Census Data</a> provided by <a href="https://datafinder.stats.govt.nz/" target="_blank" rel="noopener noreferrer">Statistics NZ</a> and the <a href="https://www.stats.govt.nz/tools/commuter-view" target="_blank" rel="noopener noreferrer">Commuter View</a></p>
 
 			<h5 className="pt-2">From the CommuterView Glossary</h5>
 			<div className="b-l-primary">
