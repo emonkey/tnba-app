@@ -1,16 +1,23 @@
 {
+  "homepage": "https://emonkey.github.io/tnba-app/",
   "name": "tnba-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.5.0",
     "deck.gl": "^8.2.2",
     "global": "^4.4.0",
     "kepler.gl": "^2.3.0",
     "luma.gl": "^7.3.2",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
     "react-map-gl": "^5.2.7",
     "react-palm": "^3.2.2",
@@ -24,6 +31,8 @@
     "redux-actions": "^2.6.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -53,10 +62,11 @@
     "@babel/preset-stage-2": "^7.8.3",
     "babel-loader": "^8.1.0",
     "babel-plugin-inline-json-import": "^0.3.2",
+    "gh-pages": "^3.1.0",
     "json-loader": "^0.5.7",
     "react-hot-loader": "^4.12.21",
     "styled-components": "^5.1.1",
-    "webpack": "^4.43.0",
+    "webpack": "^4.42.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   }
