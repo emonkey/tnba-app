@@ -13,18 +13,12 @@ let date = new Date();
 export class AppHeader extends Component {
 	render() {
 		return (
-			<header className="App-header d-flex flex-row mb-2">
-				<Container>
-					<Row>
-						<Col md={{ span: 2 }}>
-							<img src={logo} className="App-logo" alt="logo" />
-						</Col>
-						<Col>
-							<h1 className="App-title clearfix">There and Back Again</h1>
-							<div>New Zealand's daily commute in 2018</div>
-						</Col>
-					</Row>
-				</Container>
+			<header className="App-header App-card d-flex flex-row mb-2 p-2">
+				<img src={logo} className="App-logo" alt="logo" />
+				<div>
+					<h1 className="App-title clearfix">There and Back Again</h1>
+					<div>New Zealand's daily commute in 2018</div>
+				</div>
 			</header>
 		);
 	}
@@ -33,7 +27,7 @@ export class AppHeader extends Component {
 export class AppFooter extends Component {
 	render() {
 		return (
-			<footer className="App-footer d-flex flex-row mt-2">
+			<footer className="App-footer App-card d-flex flex-row mt-2">
 				<div className="Socials w-100">
 					<Row>
 						<Col className="col-8">

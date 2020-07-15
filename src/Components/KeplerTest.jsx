@@ -26,6 +26,46 @@ import wrkData from '../Data/tnb_work_1.csv.js';
 //import generalisedData from '../Data/sa2-2018-generalised.geojson.js';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiZXJpY2x1byIsImEiOiJjazd5bHhjcWcwODdxM2Vuenl6MWIwbDQ5In0.py1zWdF-m_23Zds_UjfYjQ';
+const OpenMapTilesStyles = [{
+	id: 'open_map_tile_styles',
+	label: 'Positron',
+	type: 'vector',
+	url: 'https://api.maptiler.com/maps/positron/style.json?key=YxcaBuOQJUpWfgcGrjp7',
+	layerGroups: [
+	  {
+		slug: 'label',
+		filter: ({id}) => id.match(/(?=(label|place_))/),
+		defaultVisibility: false
+	  },
+	  {
+		slug: 'road',
+		filter: ({id}) =>
+		  id.match(/(?=(road|railway|tunnel|street|bridge|highway))(?!.*label)/),
+		defaultVisibility: false
+	  },
+	  {
+		slug: 'border',
+		filter: ({id}) => id.match(/border|boundaries/),
+		defaultVisibility: false
+	  },
+	  {
+		slug: 'building',
+		filter: ({id}) => id.match(/building/),
+		defaultVisibility: false
+	  },
+	  {
+		slug: 'water',
+		filter: ({id}) => id.match(/(?=(water|stream|ferry))/),
+		defaultVisibility: true
+	  },
+	  {
+		slug: 'land',
+		filter: ({id}) =>
+		  id.match(/(?=(parks|park|landcover|industrial|sand|hillshade))/),
+		defaultVisibility: true
+	  }
+	]
+}];
 
 const EDU_DATA = Processors.processCsvData(eduData);
 const WRK_DATA = Processors.processCsvData(wrkData);
@@ -119,22 +159,22 @@ class KeplerTest extends Component {
 	render() {
 		return (
 			<ThemeProvider theme={theme}>
-				<div className="Map-container vh-100" style={{ width: '100%', height: '100%' }}>
-					<div className="Button-container d-flex flex-column">
-						<Button onClick={this.exportMapConfig}>Export Config</Button>
-						<Button onClick={this.replaceData}>Reset Data</Button>
-					</div>
-
+				<div className="Map-container App-card d-flex vh-100" style={{ width: '100%', height: '100%' }}>
 					<AutoSizer>
 						{({height, width}) => (
 							<KeplerGl
-								mapboxApiAccessToken={MAPBOX_TOKEN}
 								id="map"
 								width={width}
 								height={height}
+								mapboxApiAccessToken={MAPBOX_TOKEN}
 							/>
 						)}
 					</AutoSizer>
+				</div>
+
+				<div className="Button-container d-flex flex-row-reverse mt-1">
+					<Button onClick={this.exportMapConfig}>Export Config</Button>
+					<Button onClick={this.replaceData}>Reset Data</Button>
 				</div>
 			</ThemeProvider>
 		);

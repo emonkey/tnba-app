@@ -33,7 +33,8 @@ export default {
           ],
           type: 'multiSelect',
           value: [
-            'Wellington Central'
+            'Wellington Central',
+            "Queen Street"
           ],
           enlarged: false,
           plotType: 'histogram',
@@ -49,7 +50,8 @@ export default {
           ],
           type: 'multiSelect',
           value: [
-            'Wellington Central'
+            'Wellington Central',
+            "Queen Street"
           ],
           enlarged: false,
           plotType: 'histogram',
@@ -174,7 +176,159 @@ export default {
             },
             sizeScale: 'log'
           }
-        }
+        },
+        {
+          id: 't0iu36',
+          type: 'point',
+          config: {
+            dataId: 'WRK',
+            label: 'total WRK',
+            color: [240,109,109],
+            columns: {
+              lat: 'to_lat',
+              lng: 'to_lon',
+              altitude: null
+            },
+            isVisible: true,
+            visConfig: {
+              radius: 100,
+              fixedRadius: false,
+              opacity: 0.8,
+              outline: false,
+              thickness: 2,
+              strokeColor: null,
+              colorRange: {
+                name: 'Global Warming',
+                type: 'sequential',
+                category: 'Uber',
+                colors: [
+                  '#5A1846',
+                  '#900C3F',
+                  '#C70039',
+                  '#E3611C',
+                  '#F1920E',
+                  '#FFC300'
+                ]
+              },
+              strokeColorRange: {
+                name: 'Global Warming',
+                type: 'sequential',
+                category: 'Uber',
+                colors: [
+                  '#5A1846',
+                  '#900C3F',
+                  '#C70039',
+                  '#E3611C',
+                  '#F1920E',
+                  '#FFC300'
+                ]
+              },
+              radiusRange: [0,50],
+              filled: true
+            },
+            hidden: false,
+            textLabel: [
+              {
+                field: {
+                  name: 'Total',
+                  type: 'integer'
+                },
+                color: [255,255,255],
+                size: 18,
+                offset: [0,0],
+                anchor: 'start',
+                alignment: 'center'
+              }
+            ]
+          },
+          visualChannels: {
+            colorField: null,
+            colorScale: 'quantile',
+            strokeColorField: null,
+            strokeColorScale: 'quantile',
+            sizeField: {
+              name: 'Total',
+              type: 'integer'
+            },
+            sizeScale: 'sqrt'
+          }
+        },
+        {
+          id: '5k9tc4',
+          type: 'point',
+          config: {
+            dataId: 'EDU',
+            label: 'total EDU',
+            color: [137,218,193],
+            columns: {
+              lat: 'to_lat',
+              lng: 'to_lon',
+              altitude: null
+            },
+            isVisible: true,
+            visConfig: {
+              radius: 10,
+              fixedRadius: false,
+              opacity: 0.2,
+              outline: false,
+              thickness: 2,
+              strokeColor: null,
+              colorRange: {
+                name: 'ColorBrewer Greens-6',
+                type: 'singlehue',
+                category: 'ColorBrewer',
+                colors: [
+                  '#edf8e9',
+                  '#c7e9c0',
+                  '#a1d99b',
+                  '#74c476',
+                  '#31a354',
+                  '#006d2c'
+                ]
+              },
+              strokeColorRange: {
+                name: 'Global Warming',
+                type: 'sequential',
+                category: 'Uber',
+                colors: [
+                  '#5A1846',
+                  '#900C3F',
+                  '#C70039',
+                  '#E3611C',
+                  '#F1920E',
+                  '#FFC300'
+                ]
+              },
+              radiusRange: [0,100],
+              filled: true
+            },
+            hidden: false,
+            textLabel: [
+              {
+                field: {
+                  name: 'Total',
+                  type: 'integer'
+                },
+                color: [255,255,255],
+                size: 18,
+                offset: [0,0],
+                anchor: 'start',
+                alignment: 'center'
+              }
+            ]
+          },
+          visualChannels: {
+            colorField: null,
+            colorScale: 'quantile',
+            strokeColorField: null,
+            strokeColorScale: 'quantile',
+            sizeField: {
+              name: 'Total',
+              type: 'integer'
+            },
+            sizeScale: 'sqrt'
+          }
+        },
       ],
       interactionConfig: {
         tooltip: {
@@ -4495,20 +4649,7 @@ export default {
         }
       },
       layerBlending: 'normal',
-      splitMaps: [
-        {
-          layers: {
-            wse19hf: true,
-            edfjxw73: false
-          }
-        },
-        {
-          layers: {
-            wse19hf: false,
-            edfjxw73: true
-          }
-        }
-      ]
+      splitMaps: []
     },
     mapState: {
       dragRotate: false,
@@ -4517,10 +4658,10 @@ export default {
       zoom: 11.035138358254752,
       pitch: 52.5,
       bearing: 0,
-      isSplit: true
+      isSplit: false
     },
     mapStyle: {
-      styleType: 'dark',
+      styleType: 'open_map_tile_styles',
       topLayerGroups: {
         label: true
       },
@@ -4532,7 +4673,15 @@ export default {
         water: true,
         land: true
       },
-      threeDBuildingColor: [106,187,107]
+      threeDBuildingColor: [106,187,107],
+      mapStyles: [
+          {
+          id: 'monochrome',
+          label: 'Monochrome',
+          url: 'mapbox://styles/ericluo/ckcmngdl609ev1ilpvoxad619',
+          icon: ''
+        }
+      ]
     }
   }
 };

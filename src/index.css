@@ -1,9 +1,10 @@
 body {
   margin: 0;
-  font-family: -apple-system, 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(160deg, #506683 0%, #1a2231 100%) fixed;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,13 +13,8 @@ body {
   color: white;
 }
 
-header {
-  background-color: #282c34;
-}
-
 section,
 footer {
-  background-color: #282c34;
   padding: 1.5rem;
 }
 
@@ -28,14 +24,10 @@ code {
 }
 
 .App-logo {
-  margin: 2vmin;
-  height: 6vmin;
+  margin: 1rem;
+  margin-right: 5rem;
+  height: 5rem;
   pointer-events: none;
-}
-
-.App-header,
-.App-footer {
-  border-left: 2px solid #8aa725;
 }
 
 h1,
@@ -51,6 +43,10 @@ a,
 a:hover,
 .App-link:hover {
   color: #8aa725;
+}
+
+.App-header {
+  text-align: left;
 }
 
 .App-title {
@@ -69,37 +65,30 @@ a:hover,
   max-width: 1400px;
 }
 
+.App-card {
+  background-color: #282c34;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: 0 10px 6px -6px #777;
+}
+
 .Map-container {
   width: 100%;
 }
 
-.Map-container .kepler-gl {
-
+.Map-container > div {
+  width: 100%!important;
+  height: 100%!important;
 }
 
 .Map-container .side-panel--container {
-  position: absolute;
-  left: -325px;
-  top: -20px;
-}
-
-@media (max-width: 700px) {
-  .Map-container .side-panel--container {
-    display: none;
-  }
+  left: -55px;
 }
 
 .b-l-primary {
   padding-left: 2rem;
-  border-left: 2px solid #8aa725;
   left: -1.5rem;
   position: relative;
-}
-
-.Button-container {
-  position: absolute;
-  right: -125px;
-  width: 120px;
 }
 
 .Button-container button {
@@ -111,10 +100,53 @@ a:hover,
   cursor: pointer;
   border: 0;
   border-radius: 3px;
-  margin: .25rem 0;
+  margin: .25rem;
 }
 
 .Socials a {
   line-height: 1.5rem;
   font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  .App-header {
+    text-align: right;
+  }
+
+  .App-logo {
+    margin-top: .5rem;
+    margin-right: .5rem;
+    height: 3.5rem;
+    pointer-events: none;
+  }
+
+  .Map-container {
+    overflow: hidden;
+    min-height: 150vh;
+  }
+
+  .Map-container .side-panel--container {
+    position: relative;
+    left: -10px;
+  }
+
+  .Button-container {
+    display: none!important;
+  }
 }
