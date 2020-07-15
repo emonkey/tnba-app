@@ -34,12 +34,12 @@ export class AppFooter extends Component {
 							&copy; {date.getFullYear()} - Eric Luo
 						</Col>
 						<Col className="col-1 ml-1">
-							<a href="https://emonkey.github.io/tnba-app/">
+							<a href="https://github.com/emonkey/tnba-app" target="_blank" rel="noopener noreferrer">
 								<FontAwesomeIcon icon={faGithubSquare} />
 							</a>
 						</Col>
 						<Col className="col-1 ml-1">
-							<a href="https://www.linkedin.com/in/eric-luo/">
+							<a href="https://www.linkedin.com/in/eric-luo/" target="_blank" rel="noopener noreferrer">
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>
 						</Col>

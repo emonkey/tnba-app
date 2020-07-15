@@ -26,8 +26,8 @@ import wrkData from '../Data/tnb_work_1.csv.js';
 //import generalisedData from '../Data/sa2-2018-generalised.geojson.js';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiZXJpY2x1byIsImEiOiJjazd5bHhjcWcwODdxM2Vuenl6MWIwbDQ5In0.py1zWdF-m_23Zds_UjfYjQ';
-const OpenMapTilesStyles = [{
-	id: 'open_map_tile_styles',
+const OSM_TILES = [{
+	id: 'osm_tiles',
 	label: 'Positron',
 	type: 'vector',
 	url: 'https://api.maptiler.com/maps/positron/style.json?key=YxcaBuOQJUpWfgcGrjp7',
@@ -167,6 +167,7 @@ class KeplerTest extends Component {
 								width={width}
 								height={height}
 								mapboxApiAccessToken={MAPBOX_TOKEN}
+								mapStyles={OSM_TILES}
 							/>
 						)}
 					</AutoSizer>

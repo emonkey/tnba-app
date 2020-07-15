@@ -4,10 +4,19 @@ import { Container } from 'react-bootstrap';
 import { AppHeader, AppFooter } from './AppLayout';
 import KeplerTest from './KeplerTest';
 
+import filterButtonPng from '../filter-button.png';
+	
 function App() {
   return (
     <Container>
 		<AppHeader/>
+
+		<section className="App-card rounded mt-1 mb-2">
+			<div className="d-flex">
+				<img style={{ height: '1.5rem', borderRadius: '5px' }} src={filterButtonPng} alt="filter button"/>
+				<p className="pl-2 m-0">Get started by selecting the <strong>Filters</strong> tab from the options panel. Here, you can choose which regions to show or hide and start exploring!</p>
+			</div>
+		</section>
 
 		<KeplerTest/>
 		

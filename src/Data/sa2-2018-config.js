@@ -233,8 +233,8 @@ export default {
                   name: 'Total',
                   type: 'integer'
                 },
-                color: [255,255,255],
-                size: 18,
+                color: [201,0,0],
+                size: 24,
                 offset: [0,0],
                 anchor: 'start',
                 alignment: 'center'
@@ -309,10 +309,10 @@ export default {
                   name: 'Total',
                   type: 'integer'
                 },
-                color: [255,255,255],
-                size: 18,
+                color: [61,122,62],
+                size: 24,
                 offset: [0,0],
-                anchor: 'start',
+                anchor: 'end',
                 alignment: 'center'
               }
             ]
@@ -4661,7 +4661,7 @@ export default {
       isSplit: false
     },
     mapStyle: {
-      styleType: 'open_map_tile_styles',
+      styleType: 'frank',
       topLayerGroups: {
         label: true
       },
@@ -4675,10 +4675,22 @@ export default {
       },
       threeDBuildingColor: [106,187,107],
       mapStyles: [
-          {
+        {
           id: 'monochrome',
           label: 'Monochrome',
           url: 'mapbox://styles/ericluo/ckcmngdl609ev1ilpvoxad619',
+          icon: ''
+        },
+        {
+          id: 'decimal',
+          label: 'Decimal',
+          url: 'mapbox://styles/ericluo/ckcn33eyf27ij1ip8nftjrcwk',
+          icon: ''
+        },
+        {
+          id: 'frank',
+          label: 'Frank',
+          url: 'mapbox://styles/ericluo/ckcn3blk3282w1io4xp028gpr',
           icon: ''
         }
       ]
