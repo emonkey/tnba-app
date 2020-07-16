@@ -121,9 +121,6 @@ dist
 .vscode/
 .idea/
 dist/
-public/assets/
-server/out/
 
 preview/
-assets/
 docs/
