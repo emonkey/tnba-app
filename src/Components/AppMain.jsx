@@ -1,10 +1,14 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel'
 
 import { AppHeader, AppFooter } from './AppLayout';
 import KeplerTest from './KeplerTest';
 
-import filterButtonPng from '../filter-button.png';
+import filterbutton from '../Assets/filter-button.png';
+import eduhex from '../Assets/edu-hex.png';
+import edutraincompare from '../Assets/edu-train-compare.png';
+import wrkheatmap from '../Assets/wrk-heatmap.png';
 	
 function App() {
   return (
@@ -13,12 +17,30 @@ function App() {
 
 		<section className="App-card rounded mt-1 mb-2">
 			<div className="d-flex">
-				<img style={{ height: '1.5rem', borderRadius: '5px' }} src={filterButtonPng} alt="filter button"/>
+				<img style={{ height: '1.5rem', borderRadius: '5px' }} src={filterbutton} alt="filter button"/>
 				<p className="pl-2 m-0">Get started by selecting the <strong>Filters</strong> tab from the options panel. Here, you can choose which regions to show or hide and start exploring!</p>
 			</div>
 		</section>
 
 		<KeplerTest/>
+
+		<section className="App-card rounded mt-1 mb-2">
+			<h3>Gallery</h3>
+			<Carousel>
+				<Carousel.Item>
+					<img src={wrkheatmap} alt="Work heatmap"/>
+					<Carousel.Caption className="App-card">See the hotspots where New Zealanders work around the country</Carousel.Caption>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img src={eduhex} alt="Education hexbin"/>
+					<Carousel.Caption className="App-card">Compare the number of students in each university center</Carousel.Caption>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img src={edutraincompare} alt="Commute by train side by side"/>
+					<Carousel.Caption className="App-card">Explore the number of people who take the train in to work and education side by side</Carousel.Caption>
+				</Carousel.Item>
+			</Carousel>
+		</section>
 		
 		<section className="App-card rounded mt-1">
 			<h3>About</h3>

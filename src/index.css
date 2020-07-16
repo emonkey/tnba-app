@@ -103,6 +103,18 @@ a:hover,
   margin: .25rem;
 }
 
+.carousel-item {
+  text-align: center;
+}
+
+.carousel-item img {
+  height: 400px;
+}
+
+.carousel-caption {
+  padding: 0.5rem;
+}
+
 .Socials a {
   line-height: 1.5rem;
   font-size: 1.5rem;
@@ -144,6 +156,7 @@ a:hover,
   .Map-container .side-panel--container {
     position: relative;
     left: -10px;
+    max-height: 700px;
   }
 
   .Button-container {

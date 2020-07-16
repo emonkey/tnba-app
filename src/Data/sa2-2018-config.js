@@ -29,12 +29,11 @@ export default {
           ],
           id: 'ion1tfavm',
           name: [
-            'Usual Residence'
+            'Education'
           ],
           type: 'multiSelect',
           value: [
-            'Wellington Central',
-            "Queen Street"
+            'Wellington Central'
           ],
           enlarged: false,
           plotType: 'histogram',
@@ -46,12 +45,11 @@ export default {
           ],
           id: 'uyk7h08',
           name: [
-            'Usual Residence'
+            'Workplace'
           ],
           type: 'multiSelect',
           value: [
-            'Wellington Central',
-            "Queen Street"
+            'Wellington Central'
           ],
           enlarged: false,
           plotType: 'histogram',
@@ -90,7 +88,7 @@ export default {
                 ],
                 reversed: false
               },
-              sizeRange: [2,5],
+              sizeRange: [0.1,2],
               targetColor: null
             },
             hidden: false,
@@ -136,20 +134,19 @@ export default {
               opacity: 0.8,
               thickness: 2,
               colorRange: {
-                name: 'ColorBrewer OrRd-6',
+                name: 'ColorBrewer YlOrRd-6',
                 type: 'sequential',
                 category: 'ColorBrewer',
                 colors: [
-                  '#fef0d9',
-                  '#fdd49e',
-                  '#fdbb84',
-                  '#fc8d59',
-                  '#e34a33',
-                  '#b30000'
-                ],
-                reversed: false
+                  '#ffffb2',
+                  '#fed976',
+                  '#feb24c',
+                  '#fd8d3c',
+                  '#f03b20',
+                  '#bd0026'
+                ]
               },
-              sizeRange: [2,5],
+              sizeRange: [0.1,2],
               targetColor: null
             },
             hidden: false,
@@ -178,82 +175,6 @@ export default {
           }
         },
         {
-          id: 't0iu36',
-          type: 'point',
-          config: {
-            dataId: 'WRK',
-            label: 'total WRK',
-            color: [240,109,109],
-            columns: {
-              lat: 'to_lat',
-              lng: 'to_lon',
-              altitude: null
-            },
-            isVisible: true,
-            visConfig: {
-              radius: 100,
-              fixedRadius: false,
-              opacity: 0.8,
-              outline: false,
-              thickness: 2,
-              strokeColor: null,
-              colorRange: {
-                name: 'Global Warming',
-                type: 'sequential',
-                category: 'Uber',
-                colors: [
-                  '#5A1846',
-                  '#900C3F',
-                  '#C70039',
-                  '#E3611C',
-                  '#F1920E',
-                  '#FFC300'
-                ]
-              },
-              strokeColorRange: {
-                name: 'Global Warming',
-                type: 'sequential',
-                category: 'Uber',
-                colors: [
-                  '#5A1846',
-                  '#900C3F',
-                  '#C70039',
-                  '#E3611C',
-                  '#F1920E',
-                  '#FFC300'
-                ]
-              },
-              radiusRange: [0,50],
-              filled: true
-            },
-            hidden: false,
-            textLabel: [
-              {
-                field: {
-                  name: 'Total',
-                  type: 'integer'
-                },
-                color: [201,0,0],
-                size: 24,
-                offset: [0,0],
-                anchor: 'start',
-                alignment: 'center'
-              }
-            ]
-          },
-          visualChannels: {
-            colorField: null,
-            colorScale: 'quantile',
-            strokeColorField: null,
-            strokeColorScale: 'quantile',
-            sizeField: {
-              name: 'Total',
-              type: 'integer'
-            },
-            sizeScale: 'sqrt'
-          }
-        },
-        {
           id: '5k9tc4',
           type: 'point',
           config: {
@@ -261,8 +182,8 @@ export default {
             label: 'total EDU',
             color: [137,218,193],
             columns: {
-              lat: 'to_lat',
-              lng: 'to_lon',
+              lat: 'from_lat',
+              lng: 'from_lon',
               altitude: null
             },
             isVisible: true,
@@ -270,9 +191,9 @@ export default {
               radius: 10,
               fixedRadius: false,
               opacity: 0.2,
-              outline: false,
+              outline: true,
               thickness: 2,
-              strokeColor: null,
+              strokeColor: [69,138,70],
               colorRange: {
                 name: 'ColorBrewer Greens-6',
                 type: 'singlehue',
@@ -287,20 +208,20 @@ export default {
                 ]
               },
               strokeColorRange: {
-                name: 'Global Warming',
+                name: 'ColorBrewer YlGn-6',
                 type: 'sequential',
-                category: 'Uber',
+                category: 'ColorBrewer',
                 colors: [
-                  '#5A1846',
-                  '#900C3F',
-                  '#C70039',
-                  '#E3611C',
-                  '#F1920E',
-                  '#FFC300'
+                  '#ffffcc',
+                  '#d9f0a3',
+                  '#addd8e',
+                  '#78c679',
+                  '#31a354',
+                  '#006837'
                 ]
               },
               radiusRange: [0,100],
-              filled: true
+              filled: false
             },
             hidden: false,
             textLabel: [
@@ -318,9 +239,15 @@ export default {
             ]
           },
           visualChannels: {
-            colorField: null,
+            colorField: {
+              name: 'Total',
+              type: 'integer'
+            },
             colorScale: 'quantile',
-            strokeColorField: null,
+            strokeColorField: {
+              name: 'Total',
+              type: 'integer'
+            },
             strokeColorScale: 'quantile',
             sizeField: {
               name: 'Total',
@@ -329,6 +256,88 @@ export default {
             sizeScale: 'sqrt'
           }
         },
+        {
+          id: 't0iu36',
+          type: 'point',
+          config: {
+            dataId: 'WRK',
+            label: 'total WRK',
+            color: [82,151,218],
+            columns: {
+              lat: 'from_lat',
+              lng: 'from_lon',
+              altitude: null
+            },
+            isVisible: true,
+            visConfig: {
+              radius: 100,
+              fixedRadius: false,
+              opacity: 0.8,
+              outline: true,
+              thickness: 2,
+              strokeColor: null,
+              colorRange: {
+                name: 'ColorBrewer Reds-6',
+                type: 'singlehue',
+                category: 'ColorBrewer',
+                colors: [
+                  '#fee5d9',
+                  '#fcbba1',
+                  '#fc9272',
+                  '#fb6a4a',
+                  '#de2d26',
+                  '#a50f15'
+                ]
+              },
+              strokeColorRange: {
+                name: 'ColorBrewer YlOrRd-6',
+                type: 'sequential',
+                category: 'ColorBrewer',
+                colors: [
+                  '#ffffb2',
+                  '#fed976',
+                  '#feb24c',
+                  '#fd8d3c',
+                  '#f03b20',
+                  '#bd0026'
+                ]
+              },
+              radiusRange: [0,100],
+              filled: false
+            },
+            hidden: false,
+            textLabel: [
+              {
+                field: {
+                  name: 'Total',
+                  type: 'integer'
+                },
+                color: [59,30,177],
+                size: 24,
+                offset: [0,0],
+                anchor: 'start',
+                alignment: 'center'
+              }
+            ]
+          },
+          visualChannels: {
+            colorField: {
+              name: 'Total',
+              type: 'integer'
+            },
+            colorScale: 'quantile',
+            strokeColorField: {
+              name: 'Total',
+              type: 'integer'
+            },
+            strokeColorScale: 'quantile',
+            sizeField: {
+              name: 'Total',
+              type: 'integer'
+            },
+            sizeScale: 'sqrt'
+          }
+        }
       ],
       interactionConfig: {
         tooltip: {
@@ -4674,26 +4683,24 @@ export default {
         land: true
       },
       threeDBuildingColor: [106,187,107],
-      mapStyles: [
-        {
-          id: 'monochrome',
-          label: 'Monochrome',
-          url: 'mapbox://styles/ericluo/ckcmngdl609ev1ilpvoxad619',
-          icon: ''
-        },
-        {
-          id: 'decimal',
-          label: 'Decimal',
-          url: 'mapbox://styles/ericluo/ckcn33eyf27ij1ip8nftjrcwk',
-          icon: ''
-        },
-        {
+      mapStyles: {
+        frank: {
+          accessToken: 'pk.eyJ1IjoiZXJpY2x1byIsImEiOiJjazd5bHhjcWcwODdxM2Vuenl6MWIwbDQ5In0.py1zWdF-m_23Zds_UjfYjQ',
+          custom: true,
+          icon: 'https://api.mapbox.com/styles/v1/ericluo/ckcn3blk3282w1io4xp028gpr/static/-122.3391,37.7922,9,0,0/400x300?access_token=pk.eyJ1IjoiZXJpY2x1byIsImEiOiJjazd5bHhjcWcwODdxM2Vuenl6MWIwbDQ5In0.py1zWdF-m_23Zds_UjfYjQ&logo=false&attribution=false',
           id: 'frank',
           label: 'Frank',
-          url: 'mapbox://styles/ericluo/ckcn3blk3282w1io4xp028gpr',
-          icon: ''
+          url: 'mapbox://styles/ericluo/ckcn3blk3282w1io4xp028gpr'
+        },
+        decimal: {
+          accessToken: 'pk.eyJ1IjoiZXJpY2x1byIsImEiOiJjazd5bHhjcWcwODdxM2Vuenl6MWIwbDQ5In0.py1zWdF-m_23Zds_UjfYjQ',
+          custom: true,
+          icon: 'https://api.mapbox.com/styles/v1/ericluo/ckcn33eyf27ij1ip8nftjrcwk/static/-122.3391,37.7922,9,0,0/400x300?access_token=pk.eyJ1IjoiZXJpY2x1byIsImEiOiJjazd5bHhjcWcwODdxM2Vuenl6MWIwbDQ5In0.py1zWdF-m_23Zds_UjfYjQ&logo=false&attribution=false',
+          id: 'decimal',
+          label: 'Decimal',
+          url: 'mapbox://styles/ericluo/ckcn33eyf27ij1ip8nftjrcwk'
         }
-      ]
+      }
     }
   }
 };

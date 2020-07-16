@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import logo from '../logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
 
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithubSquare, faLinkedin  } from '@fortawesome/free-brands-svg-icons'
+import logo from '../Assets/logo.png';
 
 let date = new Date();
 
